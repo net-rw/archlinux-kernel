@@ -225,7 +225,7 @@ _package-headers() {
   done < <(find "${_builddir}/scripts" -type f -perm -u+w -print0 2>/dev/null)
 }
 
-pkgname=("${pkgbase}" "${pkgbase}-headers" "${pkgbase}-chromebook")
+pkgname=("${pkgbase}" "${pkgbase}-headers")
 for _p in ${pkgname[@]}; do
   eval "package_${_p}() {
     _package${_p#${pkgbase}}
